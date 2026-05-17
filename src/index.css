@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Sora", sans-serif;
+  
+  --color-primary: #EF4444;
+  --color-accent: #8B5CF6;
+  --color-bg: #FFFFFF;
+  --color-bg-secondary: #F9FAFB;
+  --color-dark: #111827;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-dark font-sans antialiased selection:bg-primary/20;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-gray-200;
+  }
+  
+  .glass-dark {
+    @apply bg-dark/5 backdrop-blur-xl border border-dark/10;
+  }
+  
+  .neon-glow {
+    @apply shadow-[0_10px_40px_-10px_rgba(239,68,68,0.3)];
+  }
+
+  .text-glow {
+    @apply [text-shadow:0_0_20px_rgba(239,68,68,0.3)];
+  }
+}
